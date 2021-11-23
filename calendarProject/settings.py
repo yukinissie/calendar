@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -139,3 +140,6 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # ユーザー登録確認メールは送信しない
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
